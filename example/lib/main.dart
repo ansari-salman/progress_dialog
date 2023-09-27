@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:progress_dialog/progress_dialog.dart';
+import 'package:progress_dialog/progress_dialog.dart' as prog;
 
-//import '../../lib/progress_dialog.dart';
 
-ProgressDialog pr;
+prog.ProgressDialog pr;
 
 void main() {
   runApp(MaterialApp(
@@ -22,9 +21,9 @@ class MyApp extends StatelessWidget {
 //    pr = new ProgressDialog(context, type: ProgressDialogType.Download);
 
 // Custom body test
-    pr = ProgressDialog(
+    pr = prog.ProgressDialog(
       context,
-      type: ProgressDialogType.Download,
+      type: prog.ProgressDialogType.Download,
       textDirection: TextDirection.rtl,
       isDismissible: true,
 //      customBody: LinearProgressIndicator(
@@ -122,11 +121,11 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
-  ProgressDialog pr;
+  prog.ProgressDialog pr;
 
   @override
   Widget build(BuildContext context) {
-    pr = new ProgressDialog(context, showLogs: true);
+    pr = new prog.ProgressDialog(context, showLogs: true);
     pr.style(message: 'Please wait...');
 
     return Scaffold(
